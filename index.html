@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+
+  </head>
+  <body>
+    <nav id="navBar">
+      <!-- <span id="newBoard">Nuevo</span> -->
+      <span id="saveBoard">Guardar</span>
+      <label for="archivoJSONInput">Cargar Poligon</label>
+      <input type="file" id="archivoJSONInput" accept=".json" >
+      <!-- <span id="cargarBtn">Cargar</span> -->
+    </nav>
+
+    <main id="layout" type="container">
+      
+      <section id="examples" type="sections">
+        <nav class="navTabs" type="boxTabs">
+          <span class="tabs tabsOn">Ejemplos</span>
+          <span class="tabs">Subir</span>
+        </nav>
+
+        <div id="asideLeft" type="aside">
+          <div id="tabOne" type="cardContainer">
+            <figure type="cardContainer">
+              <img id="mainPicture" alt="Sample Picture">
+              <h2 id="mainPictureName" type="title">Wonder Woman</h2>
+              
+
+              <div type="cardContainer" id="boxSamplePictures">
+                <img src="https://i.seadn.io/gae/HvDVIj_Ja67QMdDT4MVcruedisNQs4T780YIvK9i8jHffaj3nyfi4KnAWBfy0ciH3cEwn72YxENtKTL0UIsA33cym53wrLZElCVJCqo?auto=format&dpr=1&w=1000" alt="" class="samplePictures" title="Wonder Woman">
+    
+                <img src="https://i.seadn.io/gae/YcEqTOKnejAp8VRU-sNz_7sBuyC_uD68EElUz8nVQ4Sh_1O7NfXr2nsgC6QlLWiIYHvPT1ed89r90dFGTpcScS0xvDcqKbt8nFoZok4?auto=format&dpr=1&w=1000" alt="" class="samplePictures" title="Yoda">
+    
+                <img src="https://i.seadn.io/gae/KAta1S0cLn49bHETUHYg89cGzBuQ4ZaxthLhGjvzZLAwCJsHPYxXXUMQx7g4Jg6R7OPZ3_FkAnnWeNrtk0xOQO1BYUiJKmOACdyojw?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Son Goku">
+    
+                <img src="https://i.seadn.io/gae/4EGt4iWh8gtWV37pKKIOBxAR13Kmx-6LAOBldGxLddZUiDaeP6xA3rxNiopOujBlhehlmFi8NBJEJ1kiFEDOfSrfC6uE03K0iLXE?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Mazinger Z">
+    
+                <img src="https://i.seadn.io/gae/EY5upZjuJdtnnVCXCmPgGWbkZYPkMkn7-8AS81-O69-MUApDXjpFWBiGHKzPNhUgGFZognAykOcyYrQEg5tfOvgjvGjSePmhIMuucQ?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Jocker">
+    
+                <img src="https://i.seadn.io/gae/VbE-tbp-y0mGcgkHjBYZRPdEXDtPuG24jL28cWJmIw5AaJdvQT575BXzz2vvccnAfgM9cgXLTYQtxX4MirirLcaH8EzFybafmfIhgA?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Princesa Leia">
+    
+                <img src="https://i.seadn.io/gae/F_oXiiUuhmHun7Uv4u5Bc-XI5XYccCl5hZ9E8iiZAJyri7zQNUiEHZHfbsvF9gspIOwR_UZ5_bCz3C0-63rqU0obbU5rSY-yl0Z-?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Jocker">
+    
+                <img src="https://i.seadn.io/gae/kD56qsI5sdgN-pM1hiDABHHxadwdxiPnicum7tOoZLSbmFyY34aAFuSmSDl69t7bdvu8eHpDije8erfBfUM0SOLezy2BoREGxJKe?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Venom">
+    
+                <img src="https://i.seadn.io/gae/dezbz6SbOJwBwpbRs4lJG_c94TSwb07VT6QNsxTUkVZK3Il5G2epVVv0p_ErZX-x__RCI8wTxRj3xfOPzqvdHWbKxhgJ-ffov2wwJw?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Superman">
+    
+                <img src="https://i.seadn.io/gae/9RAouNPZUu3Dpf3-8laV0J6q_wr1XqWSlaZaKe6-LsGnkuAOyqspGbT5ZUnzGMfy602xZTi2RXg5fihIwYcGQYqbrO2BEejW6cRI?auto=format&dpr=1&w=1000" alt="" class="samplePictures"
+                title="Aquaman">
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <div id="poligon">
+
+        <div id="header" type="container">
+          <input type="text" name="" id="title" maxlength="20" spellcheck="false" placeholder="POLIGON"></input>
+        </div>
+        
+        <div id="barSwatches"  type="container" title="Muestras">
+          <div class="swatches" id="colorBase" style="background-color: var(--color-base-white); order: 1;"></div>
+        </div>
+
+        <div id="board" type="container"></div>
+
+        <div id="barTools" type="container">
+          <div id="boxPicker" type="container" title="Color">
+            <input id="colorPicker" type="color">
+          </div>
+          <div id="boxTools" type="container">
+            <button id="eraser" class="tool edit" title="Borrador">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eraser-fill" viewBox="0 0 16 16"> <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm.66 11.34L3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
+              </svg>
+            </button>
+            
+            <button id="cleaner" class="action edit" title="Borrar Todo">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+              fill="currentColor"
+              width="24" height="24"
+              viewBox="0 0 24 24"><path d="M16,11h-1V3c0-1.1-0.9-2-2-2h-2C9.9,1,9,1.9,9,3v8H8c-2.76,0-5,2.24-5,5v7h18v-7C21,13.24,18.76,11,16,11z M19,21h-2v-3 c0-0.55-0.45-1-1-1s-1,0.45-1,1v3h-2v-3c0-0.55-0.45-1-1-1s-1,0.45-1,1v3H9v-3c0-0.55-0.45-1-1-1s-1,0.45-1,1v3H5v-5 c0-1.65,1.35-3,3-3h8c1.65,0,3,1.35,3,3V21z"/></svg>
+            </button>
+
+            <button id="rayBrush" class="tool edit" title="Pincel Dinámico">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16"> <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/> </svg>
+            </button>
+
+            <button id="fractalSwitch" class="tool" title="Fractales">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16"> <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z"/> </svg>
+            </button>
+            
+            <button id="number5" class="tool fractal" title="Retícula de 5">
+              5x
+            </button>
+            <button id="number7" class="tool fractal on" title="Retícula de 7">
+              7x
+            </button>
+            <button id="number9" class="tool fractal" title="Retícula de 9">
+              9x
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <section id="details" type="sections">
+        <nav class="navTabs" type="boxTabs">
+          <span class="tabs tabsOn">About</span>
+          <span class="tabs">Config</span>
+        </nav>
+
+        <div id="asideRight" type="aside">
+          <div id="tabTwo" type="cardContainer">
+            <article type="article">
+              <h3 id="articleTitle" type="subTitle" >Crea un personaje</h3>
+              <p type="paragraph">Pinta cualquier personaje que tu imaginación pueda recrear en las retículas de triángulos de Poligon. Desafía tu creativad pintando nuevos personajes, o intenta rehacer uno de los ejemplos de la izquierda. Las posibilidades son infinitas.</p>
+              <p type="paragraph">Poligon es un proyecto personal que surgió como una práctica de javascript y css.</p>
+            </article>
+            <div id="infoCreator" >
+              <h3 type="subTitle">Creado por:</h3 >
+              <span>
+                <a href="https://www.linkedin.com/in/alejandro-acurio-vite-656874118/" target="_blank">Alex Acurio</a>
+                <a href="https://www.instagram.com/alex.acurio/" target="_blank">Instagram</a>
+                <a href="https://github.com/alexacurio" target="_blank">Github</a>
+                <a href="https://www.behance.net/alexacurio" target="_blank">Behance</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <span id="info_2">
+      <a href="https://www.linkedin.com/in/alejandro-acurio-vite-656874118/" target="_blank">Alex Acurio</a>
+      <a href="https://www.instagram.com/alex.acurio/" target="_blank">Instagram</a>
+      <a href="https://github.com/alexacurio" target="_blank">Github</a>
+      <a href="https://www.behance.net/alexacurio" target="_blank">Behance</a>
+    </span>
+
+    <script type="module" src="script.js"></script>
+
+  </body>
+</html>
