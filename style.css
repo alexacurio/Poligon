@@ -74,7 +74,7 @@
 
 body{
   margin: 0;
-  background: var(--color-body-grd) no-repeat;
+  background: var(--color-body) no-repeat;
   height: 100vh;
   width: 100vw;
   font-family: 'VT323', monospace;
